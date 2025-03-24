@@ -1,0 +1,102 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-y: scroll;
+    min-height: 100vh;
+}
+.header {
+    background-color: #800020;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav {
+    background-color: #60001a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+.nav a:hover {
+    color: rgb(124, 91, 91);
+}
+.content {
+    padding: 20px;
+    min-height: 80vh;
+}
+.box {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid transparent;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #800020;
+    color: white;
+}
+#logo-unsis{
+    width: 80px;
+}
+.footer {
+    background-color: #800020;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.footer ul li {
+    display: inline;
+}
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer ul li a:hover {
+    color: #ffd700;
+}
+    .aside {
+        background-color: #60001a;
+        color: white;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        overflow-y: auto;
+    }
+    .container-fluid {
+        flex: 1;
+        display: flex;
+    }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño adaptable al tamaño del dispositivo -->
+    <title>Noticias - Universidad de la Sierra Sur</title>
+    
+    <!-- Enlace a la librería de estilos Bootstrap 5 para diseño responsivo y estilos predefinidos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Enlace a un archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Encabezado principal de la página -->
+    <div class="header">
+        <img id="logo-unsis" src="imgs/UNSIS.png" alt="logo-unsis">Noticias - Universidad de la Sierra Sur
+    </div>
+
+    <!-- Menú de navegación con enlaces a distintas secciones de la página -->
+    <nav class="nav">
+        <a href="#avisos" onclick="mostrarAvisos()">Avisos</a>
+        <a href="#galeria" onclick="mostrarGaleria()">Galería de graduados</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    
+    <!-- Contenedor principal del contenido de la página -->
+    <div class="container-fluid">
+        <div class="content container mt-4">
+            <!-- Sección de avisos importantes -->
+            <section id="avisos">
+                <h2 class="text-center">Avisos Importantes</h2>
+                <div id="avisosContainer"></div> <!-- Contenedor dinámico para mostrar avisos -->
+            </section>
+            
+            <!-- Sección de la galería de graduados -->
+            <section id="galeria" class="mt-5" style="display: none;">
+                <h2 class="text-center">Galería de Graduados</h2>
+                <div class="mb-3">
+                    <!-- Filtro para seleccionar la carrera de los graduados -->
+                    <label for="filtroCarreras" class="form-label">Filtrar por Carrera:</label>
+                    <select id="filtroCarreras" class="form-select" onchange="filtrarPorCarrera()">
+                        <option value="">Todas</option>
+                        <optgroup label="Licenciaturas">
+                            <!-- Opciones para las licenciaturas disponibles -->
+                            <option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option>
+                            <option value="Licenciatura en Ciencias Empresariales">Licenciatura en Ciencias Empresariales</option>
+                            <option value="Licenciatura en Administración Pública">Licenciatura en Administración Pública</option>
+                            <option value="Licenciatura en Informática">Licenciatura en Informática</option>
+                            <option value="Licenciatura en Enfermería">Licenciatura en Enfermería</option>
+                            <option value="Licenciatura en Administración Municipal">Licenciatura en Administración Municipal</option>
+                            <option value="Licenciatura en Odontología">Licenciatura en Odontología</option>
+                            <option value="Licenciatura en Medicina">Licenciatura en Medicina</option>
+                            <option value="Licenciatura en Ciencias Biomédicas">Licenciatura en Ciencias Biomédicas</option>
+                        </optgroup>
+                        <optgroup label="Postgrados">
+                            <!-- Opciones para los postgrados disponibles -->
+                            <option value="Maestría en Planeación Estratégica Municipal">Maestría en Planeación Estratégica Municipal</option>
+                            <option value="Maestría en Salud Pública">Maestría en Salud Pública</option>
+                            <option value="Maestría en Gobierno Electrónico">Maestría en Gobierno Electrónico</option>
+                            <option value="Maestría en Administración Universitaria">Maestría en Administración Universitaria</option>
+                            <option value="Doctorado en Gobierno Electrónico">Doctorado en Gobierno Electrónico</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Contenedor dinámico para mostrar la lista de graduados filtrados -->
+                <div class="row" id="graduadosContainer"></div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Pie de página con información de contacto y derechos reservados -->
+    <footer class="footer" id="contacto">
+        <ul>
+            <li><a href="#">&copy; 2025 Bernardino, Hugo, Manuel, Eleazar. Todos los derechos reservados.</a></li>
+            <li><a href="">UNSIS-CONTACTO 951 572 4100 ext. 1204</a></li>
+            <li><a href="#">CONTACTO-DEVS</a></li>
+            <li><a href="https://www.unsis.edu.mx/" target="_blank">Más sobre UNSIS...</a></li>
+        </ul>
+    </footer>
+    
+    <!-- Enlace al archivo JavaScript para funcionalidades personalizadas -->
+    <script src="js/cliente.js"></script>
+</body>
+</html>

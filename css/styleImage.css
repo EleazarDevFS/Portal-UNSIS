@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #800020;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+#formularioGraduado {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #800020;
+    color: white;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.btn-danger {
+    background-color: #800020;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #60001a;
+}
+
+.btn-primary {
+    background-color: #60001a;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #800020;
+}
+#inicio{
+    text-decoration: none;
+    color: #800020;
+    transition: color .3s ease;
+}
+#inicio:hover{
+    text-decoration: underline;
+    color:#800020;
+}

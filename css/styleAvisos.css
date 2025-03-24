@@ -1,0 +1,123 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #800020;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Formulario */
+#formularioAviso {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/* Estilo de los Avisos */
+.box {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para el botón de eliminar */
+}
+
+.box h2 {
+    color: #800020;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Botón Eliminar */
+.box .btn-danger {
+    background-color: transparent;
+    color: #800020;
+    border: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    opacity: 0.6;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none; /* Inicialmente oculto */
+}
+
+.box:hover .btn-danger {
+    display: inline-block; /* Muestra el botón cuando el mouse pasa sobre el aviso */
+}
+
+.box .btn-danger:hover {
+    opacity: 1;
+    background-color: #fff;
+}
+
+.box .btn-danger:focus {
+    outline: none;
+}
+
+/* Botón Agregar Aviso */
+.btn-primary {
+    background-color: #60001a;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #800020;
+}
+
+/* Estilo de pie de página */
+footer {
+    background-color: #800020;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+img{
+    width: 50px;
+}

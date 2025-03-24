@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Graduados - UNSIS</title>
+    <!-- Importa el framework Bootstrap para estilos rápidos y responsivos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleImage.css"> <!-- Archivo de estilos personalizados -->
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Enlace de navegación al inicio -->
+        <a href="index.html" id="inicio">Inicio</a>
+
+        <!-- Título principal de la página -->
+        <h2 class="text-center">Galería de Graduados</h2>
+
+        <!-- Botón para mostrar el formulario de registro de nuevos graduados -->
+        <button class="btn btn-success mb-3" onclick="mostrarFormulario()">Agregar Graduado</button>
+
+        <!-- Formulario para registrar un nuevo graduado (inicialmente oculto) -->
+        <div id="formularioGraduado" class="mb-4" style="display: none;">
+            <h3>Nuevo Graduado</h3>
+            <form id="uploadForm">
+                <!-- Campo para el nombre del graduado -->
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <!-- Campo para los apellidos del graduado -->
+                <div class="mb-3">
+                    <label for="apellidos" class="form-label">Apellidos:</label>
+                    <input type="text" class="form-control" id="apellidos" required>
+                </div>
+                <!-- Campo para la edad del graduado -->
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input type="number" class="form-control" id="edad" required>
+                </div>
+                <!-- Campo para seleccionar la licenciatura o postgrado -->
+                <div class="mb-3">
+                    <label for="licenciaturaSelect" class="form-label">Licenciatura:</label>
+                    <select id="licenciatura" class="form-select" required>
+                        <optgroup label="Licenciaturas">
+                            <option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option>
+                            <option value="Licenciatura en Ciencias Empresariales">Licenciatura en Ciencias Empresariales</option>
+                            <option value="Licenciatura en Administración Pública">Licenciatura en Administración Pública</option>
+                            <option value="Licenciatura en Informática">Licenciatura en Informática</option>
+                            <option value="Licenciatura en Enfermería">Licenciatura en Enfermería</option>
+                            <option value="Licenciatura en Administración Municipal">Licenciatura en Administración Municipal</option>
+                            <option value="Licenciatura en Odontología">Licenciatura en Odontología</option>
+                            <option value="Licenciatura en Medicina">Licenciatura en Medicina</option>
+                            <option value="Licenciatura en Ciencias Biomédicas">Licenciatura en Ciencias Biomédicas</option>
+                        </optgroup>
+                        <optgroup label="Postgrados">
+                            <option value="Maestría en Planeación Estratégica Municipal">Maestría en Planeación Estratégica Municipal</option>
+                            <option value="Maestría en Salud Pública">Maestría en Salud Pública</option>
+                            <option value="Maestría en Gobierno Electrónico">Maestría en Gobierno Electrónico</option>
+                            <option value="Maestría en Administración Universitaria">Maestría en Administración Universitaria</option>
+                            <option value="Doctorado en Gobierno Electrónico">Doctorado en Gobierno Electrónico</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Campo para seleccionar la opción de titulación -->
+                <div class="mb-3">
+                    <label for="opcionTitulacion" class="form-label">Opción de Titulación:</label>
+                    <select class="form-control" id="opcionTitulacion" required>
+                        <option value="Tesis">Tesis</option>
+                        <option value="Ceneval">Ceneval</option>
+                    </select>
+                </div>
+                <!-- Campo para subir una imagen del graduado -->
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">Subir Imagen:</label>
+                    <input type="file" class="form-control" id="imagen" accept="image/*" required>
+                </div>
+                <!-- Botón para enviar el formulario -->
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+
+        <!-- Tabla para mostrar la lista de graduados -->
+        <div class="table-responsive">
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Edad</th>
+                        <th>Licenciatura</th>
+                        <th>Opción de Titulación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <!-- El cuerpo de la tabla se llenará dinámicamente con JavaScript -->
+                <tbody id="graduadosTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Archivo de script para manejar el formulario y la tabla -->
+    <script src="js/script.js"></script>
+</body>
+</html>
